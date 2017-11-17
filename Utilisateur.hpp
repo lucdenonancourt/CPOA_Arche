@@ -2,6 +2,7 @@
 #define UTILISATEUR
 
 #include <ctime>
+#include <string>
 
 class Utilisateur {
 

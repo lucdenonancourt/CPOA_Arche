@@ -11,9 +11,13 @@
  **/
 
 #include "Utilisateur.hpp"
+#include "Etudiant.hpp"
+
+#include <ctime>
 
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]){
+
   // Creation de toutes les sous-classes d'utilisateur
   struct tm date;
   date.tm_year = 95;
@@ -21,4 +25,6 @@ int main(int argc, char *argv[]) {
   date.tm_mday = 12;
 
   Etudiant etud("Nom","Prenom",date);
+
+  return 0;
 }

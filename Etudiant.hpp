@@ -2,6 +2,7 @@
 #define ETUDIANT
 
 #include "Utilisateur.hpp"
+#include <string>
 
 
 class Etudiant : public Utilisateur {
@@ -9,7 +10,7 @@ class Etudiant : public Utilisateur {
   std::string numIne;
 
 
-protected:
+public:
   Etudiant(std::string n, std::string p, struct tm d)
   {
     id = "test";
@@ -19,4 +20,5 @@ protected:
     numIne = id+"_"+nom;
   }
 
- 
+};
+#endif
