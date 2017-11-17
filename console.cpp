@@ -3,6 +3,8 @@
  **
  ** Ce programme teste les classes héritant de @ref Utilisateur.
  ** 
+ ** À compiler avec la commande 'make -f text.make'.
+ **
  ** @version 1a
  **
  ** @author Luc de Nonancourt
@@ -13,12 +15,10 @@
 
 int main(int argc, char *argv[]) {
   // Creation de toutes les sous-classes d'utilisateur
-  Etudiant etud;
-  Enseignant ens;
-  Administrateur admin;
-  // 
-  etud.affiche(std::cout); //On vérifie l'étudiant
-  ens.affiche(std::cout); //On verifie l'enseignant
-  admin.affiche(std::cout); //On verifie l'administrateur
+  struct tm date;
+  date.tm_year = 95;
+  date.tm_mon = 1;
+  date.tm_mday = 12;
 
+  Etudiant etud("Nom","Prenom",date);
 }

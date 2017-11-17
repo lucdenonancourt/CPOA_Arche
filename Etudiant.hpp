@@ -10,5 +10,13 @@ class Etudiant : public Utilisateur {
 
 
 protected:
-  Etudiant(std::string nom, std::string prenom, struct tm date)
+  Etudiant(std::string n, std::string p, struct tm d)
+  {
+    id = "test";
+    nom = n;
+    prenom = p;
+    dateNaiss = d;
+    numIne = id+"_"+nom;
+  }
+
  
