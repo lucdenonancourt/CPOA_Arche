@@ -13,7 +13,7 @@ class Enseignant : public Utilisateur {
 
 public:
   
-  Etudiant(std::string n, std::string p, struct tm d)
+  Enseignant(std::string numE, std::string prenom, struct tm dateNais)
   :Utilisateur(n,p,d)
   {
     numIne = "test_"+nom;
