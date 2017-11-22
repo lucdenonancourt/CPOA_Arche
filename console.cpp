@@ -11,6 +11,9 @@
  **/
 
 #include "Etudiant.hpp"
+#include "Enseignant.hpp"
+#include "Administrateur.hpp"
+
 
 #include <ctime>
 #include <ostream>
@@ -23,9 +26,15 @@ int main(int argc, char *argv[]){
   date.tm_mon = 1;
   date.tm_mday = 12;
 
-  Etudiant etud("Nom","Prenom",date);
+  Etudiant etud("denonancourt","luc",date);
+
+  Enseignant ens("brecourt","hugo",date);
+  
+  Administrateur admin("fornito","marvin",date);
   
   std::cout << etud << std::endl;
+  std::cout << ens << std::endl;
+  std::cout << admin << std::endl;
 
   return 0;
 }
