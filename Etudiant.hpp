@@ -15,7 +15,10 @@ public:
   Etudiant(std::string n, std::string p, struct tm d)
   :Utilisateur(n,p,d)
   {
-    numIne = "test_"+nom;
+    numIne = "test_"+n;
+    prenom = p;
+    nom = n;
+    dateNaiss = d;
   }
 
 };
