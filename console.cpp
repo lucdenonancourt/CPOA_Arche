@@ -13,7 +13,7 @@
 #include "Etudiant.hpp"
 
 #include <ctime>
-
+#include <ostream>
 
 int main(int argc, char *argv[]){
 
@@ -24,6 +24,8 @@ int main(int argc, char *argv[]){
   date.tm_mday = 12;
 
   Etudiant etud("Nom","Prenom",date);
+  
+  std::cout << etud << std::endl;
 
   return 0;
 }

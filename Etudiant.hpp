@@ -3,12 +3,13 @@
 
 #include "Utilisateur.hpp"
 #include <string>
+#include <ostream>
 
 
 class Etudiant : public Utilisateur {
 
   std::string numIne;
-
+  friend std::ostream& operator<<(std::ostream&, const Etudiant&);
 
 public:
   
@@ -18,5 +19,11 @@ public:
     numIne = "test_"+nom;
   }
 
+  
 };
+
+std::ostream& operator<<(std::ostream &strm, const Etudiant &a) {
+  return strm << "Etudiant(" << a.nom << ", " << a.prenom << ", " << a.numIne << ")";
+}
+
 #endif
