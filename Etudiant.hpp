@@ -4,6 +4,7 @@
 #include "Utilisateur.hpp"
 #include <string>
 #include <ostream>
+#include <iostream>
 
 
 class Etudiant : public Utilisateur {
@@ -16,7 +17,7 @@ public:
   Etudiant(std::string n, std::string p, struct tm d)
   :Utilisateur(n,p,d)
   {
-    numIne = "test_"+nom;
+    numIne = "" + n.substr(0,5) + p.substr(0,3)+"3u";
   }
 
   

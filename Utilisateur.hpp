@@ -11,11 +11,10 @@ protected:
   
   friend std::ostream& operator<<(std::ostream&, const Utilisateur&);
 
+  
   std::string nom;
   std::string prenom;
   struct tm dateNaiss;
-  
-  
   
   Utilisateur(std::string n, std::string p, struct tm d){
     nom = n;
