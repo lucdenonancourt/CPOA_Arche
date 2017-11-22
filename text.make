@@ -1,5 +1,5 @@
 #
-# Makefile écrit par Johnny Sins
+# Makefile écrit par Hugo Brecourt
 #
 
 # fichiers utilisés pour le test dans la console et la documentation

@@ -11,11 +11,10 @@ class Etudiant : public Utilisateur {
 
 
 public:
+  
   Etudiant(std::string n, std::string p, struct tm d)
+  :Utilisateur(n,p,d)
   {
-    nom = n;
-    prenom = p;
-    dateNaiss = d;
     numIne = "test_"+nom;
   }
 
