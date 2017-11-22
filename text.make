@@ -4,7 +4,7 @@
 
 # fichiers utilisés pour le test dans la console et la documentation
 TEST   = console.cpp 
-FILES  = Etudiant.hpp  Utilisateur.hpp \
+FILES  = Etudiant.hpp  Enseignant.hpp Utilisateur.hpp \
 	  $(TEST)
 
 # pour compiler le test des wraps dans la console
