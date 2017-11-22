@@ -1,0 +1,27 @@
+#
+# Makefile écrit par A. Scheuer
+#
+
+# fichiers utilisés pour le test dans la console et la documentation
+TEST   = console.cpp 
+FILES  = Pizza.hpp  Fond.hpp  Base.hpp  Ingredient.hpp  Restaurant.hpp \
+	  $(TEST)
+DOX_FL = Doxyfile
+DOC_FL = $(FILES)  $(DOX_FL)
+
+# pour compiler le test des wraps dans la console
+verif: 	$(FILES)
+	g++ -Wall -ansi -o $@ $(TEST)
+
+# pour générer la documentation
+doc:	$(DOC_FL)
+	doxygen $(DOX_FL)
+
+clean:	clean_doc 
+	\rm -f *~ verif 
+
+clean_doc: 
+	\rm -Rf html/*
+
+dist:	clean clean_doc
+	tar -jcf ../pizza.tbz $(DOC_FL) html text.make lisez_moi.txt
