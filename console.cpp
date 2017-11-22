@@ -10,7 +10,6 @@
  ** @author Luc de Nonancourt
  **/
 
-#include "Utilisateur.hpp"
 #include "Etudiant.hpp"
 
 #include <ctime>

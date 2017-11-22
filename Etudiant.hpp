@@ -13,11 +13,10 @@ class Etudiant : public Utilisateur {
 public:
   Etudiant(std::string n, std::string p, struct tm d)
   {
-    id = "test";
     nom = n;
     prenom = p;
     dateNaiss = d;
-    numIne = id+"_"+nom;
+    numIne = "test_"+nom;
   }
 
 };
