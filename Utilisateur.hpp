@@ -8,25 +8,22 @@
 class Utilisateur {
 
 protected:
-  
-  friend std::ostream& operator<<(std::ostream&, const Utilisateur&);
 
-  
   std::string nom;
   std::string prenom;
   struct tm dateNaiss;
-  
+
   Utilisateur(std::string n, std::string p, struct tm d){
     nom = n;
     prenom = p;
-    dateNaiss = d; 
+    dateNaiss = d;
   }
 
 public:
   ///destructeur.
   virtual ~Utilisateur() {}
-  
-  
+  virtual void print() = 0;
+
 };
 
 #endif

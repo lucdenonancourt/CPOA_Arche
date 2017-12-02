@@ -11,8 +11,6 @@ class Administrateur : public Utilisateur {
 
   //Numéro de l'Administrateur, généré automatiquement dans le construceur
   std::string numAdmin;
-  //Permet la redefinition de l'opérateur <<
-  friend std::ostream& operator<<(std::ostream&, const Administrateur&);
 
 public:
   //Constructeur de la classe Administrateur.
@@ -22,12 +20,12 @@ public:
     numAdmin =  "admin_" + n.substr(0,5) + p.substr(0,3);
   }
 
-  
+  void print(){
+        std::cout << "Administrateur " <<  nom << " " << prenom <<'\n';
+  }
+
+
 };
 
-//Permet l'affichage des données de l'administrateur
-std::ostream& operator<<(std::ostream &strm, const Administrateur &a) {
-  return strm << "Administrateur(" << a.nom << ", " << a.prenom << ", " << a.numAdmin << ")";
-}
 
 #endif

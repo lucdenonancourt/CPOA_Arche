@@ -1,23 +1,58 @@
 #ifndef UTILISATEURABSTRACTFACTORY
 #define UTILISATEURABSTRACTFACTORY
 
-#include <map>
+
 #include <string>
-#include "Utilisateur.hpp"
 
-
-class UtilisateurAbstratFactory 
+class UtilisateurAbstractFactory
 {
-protected:
-  
-       static std::map<std::string,Utilisateur*> m_map;
+
+  public:
+    virtual Utilisateur *creerUtilisateur(std::string nom, std::string prenom) = 0;
+
+};
+
+class EtudiantConcreteFactory : public UtilisateurAbstractFactory {
 
 public:
-        //Fonction qui associe clé <=> Utilisateur
-        virtual static void Register(const std::string& key,Utilisateur* obj);
 
-        //Fonction qui créer les Utilisateur (en fonction du type key)
-         virtual Utilisateur* Create(const std::string& key) const;
+    Utilisateur *creerUtilisateur(std::string nom, std::string prenom){
+      struct tm date;
+      date.tm_year = 95;
+      date.tm_mon = 1;
+      date.tm_mday = 12;
+      return new Etudiant(nom, prenom, date);
+    };
+
 };
+
+class AdministrateurConcreteFactory : public UtilisateurAbstractFactory {
+
+public:
+
+    Utilisateur *creerUtilisateur(std::string nom, std::string prenom){
+      struct tm date;
+      date.tm_year = 95;
+      date.tm_mon = 1;
+      date.tm_mday = 12;
+      return new Administrateur(nom, prenom, date);
+    };
+
+};
+
+class EnseignantConcreteFactory : public UtilisateurAbstractFactory {
+
+public:
+
+    Utilisateur *creerUtilisateur(std::string nom, std::string prenom){
+      struct tm date;
+      date.tm_year = 95;
+      date.tm_mon = 1;
+      date.tm_mday = 12;
+      return new Enseignant(nom, prenom, date);
+    };
+
+};
+
 
 #endif
