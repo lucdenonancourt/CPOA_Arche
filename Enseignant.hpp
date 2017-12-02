@@ -26,6 +26,7 @@ public:
 
   }
 
+  //Affiche le nom et prenom de l'enseignant en console
   void print(){
         std::cout << "Enseignant " <<  nom << " " << prenom <<'\n';
   }

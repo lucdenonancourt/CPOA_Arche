@@ -20,6 +20,7 @@ public:
     numAdmin =  "admin_" + n.substr(0,5) + p.substr(0,3);
   }
 
+  //Affiche le nom et prenom de l'administrateur en console
   void print(){
         std::cout << "Administrateur " <<  nom << " " << prenom <<'\n';
   }
