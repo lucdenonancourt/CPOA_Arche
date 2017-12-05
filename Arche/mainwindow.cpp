@@ -12,3 +12,13 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_inscriptionButton_clicked()
+{
+
+}
+
+void MainWindow::on_connexionButton_clicked()
+{
+
+}

@@ -13,8 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    inscription.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h Administrateur.hpp Enseignant.hpp Etudiant.hpp Utilisateur.hpp UtilisateurAbstractFactory.hpp \
+    inscription.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    inscription.ui
