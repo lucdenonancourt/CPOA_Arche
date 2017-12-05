@@ -18,6 +18,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -32,6 +33,7 @@ public:
     QLabel *label;
     QPushButton *inscriptionButton;
     QPushButton *connexionButton;
+    QSlider *horizontalSlider;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -55,6 +57,16 @@ public:
         connexionButton = new QPushButton(centralWidget);
         connexionButton->setObjectName(QStringLiteral("connexionButton"));
         connexionButton->setGeometry(QRect(230, 280, 181, 71));
+        horizontalSlider = new QSlider(centralWidget);
+        horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
+        horizontalSlider->setGeometry(QRect(240, 400, 160, 29));
+        horizontalSlider->setMouseTracking(false);
+        horizontalSlider->setFocusPolicy(Qt::TabFocus);
+        horizontalSlider->setContextMenuPolicy(Qt::ActionsContextMenu);
+        horizontalSlider->setAutoFillBackground(false);
+        horizontalSlider->setMinimum(50);
+        horizontalSlider->setMaximum(64);
+        horizontalSlider->setOrientation(Qt::Horizontal);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));

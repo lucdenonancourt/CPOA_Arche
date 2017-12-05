@@ -16,7 +16,7 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     inscription.cpp
 
-HEADERS  += mainwindow.h Administrateur.hpp Enseignant.hpp Etudiant.hpp Utilisateur.hpp UtilisateurAbstractFactory.hpp \
+HEADERS  += mainwindow.h Administrateur.hpp Enseignant.hpp Etudiant.hpp Utilisateur.hpp UtilisateurAbstractFactory.hpp Cours.hpp\
     inscription.h
 
 FORMS    += mainwindow.ui \

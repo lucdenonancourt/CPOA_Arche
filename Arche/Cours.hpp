@@ -25,7 +25,7 @@ class Cours {
   struct tm dateFin;
 
   //Date de fin des inscriptions
-  struct tm dateFinInscription
+  struct tm dateFinInscription;
 
   //Capacité max de personne pour un cours
   int nbPlaces;

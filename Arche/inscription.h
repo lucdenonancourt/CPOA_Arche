@@ -15,6 +15,9 @@ public:
     explicit Inscription(QWidget *parent = 0);
     ~Inscription();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
     Ui::Inscription *ui;
 };
