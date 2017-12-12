@@ -49,8 +49,9 @@ int main(int argc, char *argv[]){
   date.tm_mday = 12;
 
   //On créer un cours
-  //Cours *c = enseignant->proposerCours("CPOA", "Conception", date, date, date, 200);
-  //std::cout << c << "\n";
+  Enseignant* ens = static_cast<Enseignant*>(enseignant);
+  Cours *c = ens->proposerCours("CPOA", "Conception", date, date, date, 200);
+  std::cout << *c << "\n";
 
 
 

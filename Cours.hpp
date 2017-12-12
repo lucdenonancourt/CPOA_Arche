@@ -20,6 +20,7 @@
  * a l'application
  *
  */
+class Enseignant;
 class Cours {
 
   std::string id_cours; /*!< Numéro du cours */
@@ -39,7 +40,7 @@ class Cours {
   bool enAttenteValidation; /*!< Boolean etat du cours si il est validé par l'admin ou non */
 
   //Enseignant proposant le cours
-  //Enseignant enseignant;
+  Enseignant* enseignant;
 
 
   friend std::ostream& operator<<(std::ostream&, const Cours&);
@@ -59,7 +60,7 @@ public:
    * \param dateFinInsc Date de fin d'inscriptions
    * \param capa Capacité d'étudiant maximal du cours
    */
-  Cours(std::string nomCours, std::string description, struct tm dateD, struct tm dateF, struct tm dateFinInsc, int capa)  {
+  Cours(std::string nomCours, std::string description, struct tm dateD, struct tm dateF, struct tm dateFinInsc, int capa, Enseignant* ens)  {
     id_cours = nomCours;
     descr = description;
     ouvert = false;
@@ -68,7 +69,7 @@ public:
     dateFinInscription = dateFinInsc;
     nbPlaces = capa;
     enAttenteValidation = false;
-    //enseignant = ens;
+    enseignant = ens;
   }
   /*!
    * \brief Destructeur

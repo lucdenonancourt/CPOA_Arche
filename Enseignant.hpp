@@ -65,7 +65,7 @@ public:
    * \return pointeur vers le cours créé
    */
   Cours* proposerCours(std::string nomCours, std::string description, struct tm dateDebut, struct tm dateFin, struct tm dateFinInsc, int nbPLaces){
-    return new Cours(nomCours, description, dateDebut, dateFin, dateFinInsc, nbPLaces);
+    return new Cours(nomCours, description, dateDebut, dateFin, dateFinInsc, nbPLaces, this);
   }
 
   /*!
