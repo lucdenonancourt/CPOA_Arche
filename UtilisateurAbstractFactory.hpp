@@ -1,9 +1,22 @@
 #ifndef UTILISATEURABSTRACTFACTORY
 #define UTILISATEURABSTRACTFACTORY
 
+/**
+ * \file
+ * \brief
+ * \version
+ * \date
+ *
+ *
+ */
 
 #include <string>
 
+/*! \class
+ * \brief
+ *
+ *
+ */
 class UtilisateurAbstractFactory
 {
 
@@ -11,7 +24,6 @@ class UtilisateurAbstractFactory
     virtual Utilisateur *creerUtilisateur(std::string nom, std::string prenom) = 0;
 
 };
-
 class EtudiantConcreteFactory : public UtilisateurAbstractFactory {
 
 public:

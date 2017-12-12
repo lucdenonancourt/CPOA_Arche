@@ -1,60 +1,81 @@
-#ifndef 
-#define 
+#ifndef COURS
+#define COURS
 
-#include "Utilisateur.hpp"
+/**
+ * \file
+ * \brief
+ * \version
+ * \date
+ *
+ *
+ */
+
 #include <string>
 #include <ostream>
 
-
-
+/*! \class
+ * \brief
+ *
+ *
+ */
 class Cours {
 
-  //Numéro du cours
-  std::string id_cours;
+  std::string id_cours; /*!< Numéro du cours */
 
-  //Description du cours
-  std::string descr;
+  std::string descr; /*!< Description du cours */
 
-  //Booléen etat du cours si il est ouvert ou fermé
-  bool ouvert;
+  bool ouvert; /*!< Booléen etat du cours si il est ouvert ou fermé */
 
-  //Date de début du cours
-  struct tm dateDebut;
-  
-  //Date de fin du cours
-  struct tm dateFin;
+  struct tm dateDebut; /*!< Date de début du cours */
 
-  //Date de fin des inscriptions
-  struct tm dateFinInscription
+  struct tm dateFin; /*!< Date de fin du cours */
 
-  //Capacité max de personne pour un cours
-  int nbPlaces;
+  struct tm dateFinInscription; /*!< Date de fin des inscriptions */
 
-  //Boolean etat du cours si il est validé par l'admin ou non
-  bool enAttenteValidation;
-  
+  int nbPlaces; /*!< Capacité max de personne pour un cours */
+
+  bool enAttenteValidation; /*!< Boolean etat du cours si il est validé par l'admin ou non */
+
+  //Enseignant proposant le cours
+  //Enseignant enseignant;
+
 
   friend std::ostream& operator<<(std::ostream&, const Cours&);
 
 
 public:
-  
-  Cours(std::string description, struct tm dateD, struct tm dateF, struct tm dateFinInsc, int capa )  {
-    id_cours = "A definir";
+
+  /*!
+   * \brief Constructeur
+   *
+   * Constructeur de la classe
+   *
+   * \param n
+   * \param p
+   * \param d
+   */
+  Cours(std::string nomCours, std::string description, struct tm dateD, struct tm dateF, struct tm dateFinInsc, int capa)  {
+    id_cours = nomCours;
     descr = description;
     ouvert = false;
     dateDebut = dateD;
     dateFin = dateF;
     dateFinInscription = dateFinInsc;
     nbPlaces = capa;
-    enAttenteValidation = false;    
+    enAttenteValidation = false;
+    //enseignant = ens;
   }
+  /*!
+   * \brief Destructeur
+   *
+   *
+   */
+   ~Cours();
 
 };
 
-std::ostream& operator<<(std::ostream &strm, const Cours &e) {
-  return strm << "Cours(" << e.nom << ", " << e.prenom << ", " 
-	      << e.numEns << ")";
+std::ostream& operator<<(std::ostream &strm, const Cours &c) {
+  return strm << "Cours(" << c.id_cours << ")";
 }
 
 #endif

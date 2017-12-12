@@ -13,6 +13,7 @@
 #include "Enseignant.hpp"
 #include "Administrateur.hpp"
 #include "UtilisateurAbstractFactory.hpp"
+#include "Cours.hpp"
 
 
 #include <ctime>
@@ -29,19 +30,30 @@ int main(int argc, char *argv[]){
 
   //Etudiant
   factory = new EtudiantConcreteFactory;
-  Utilisateur *etu = factory->creerUtilisateur("Luc", "de Nonancourt");
-  etu->print();
+  Utilisateur *etudiant = factory->creerUtilisateur("Luc", "de Nonancourt");
+  etudiant->print();
 
   //Enseignant
   factory = new EnseignantConcreteFactory;
-  etu = factory->creerUtilisateur("Hugo", "Brecourt");
-  etu->print();
+  Utilisateur *enseignant = factory->creerUtilisateur("Hugo", "Brecourt");
+  enseignant->print();
 
   //Administrateur
   factory = new AdministrateurConcreteFactory;
-  etu = factory->creerUtilisateur("Marvin", "Fornito");
-  etu->print();
+  Utilisateur *administrateur = factory->creerUtilisateur("Marvin", "Fornito");
+  administrateur->print();
 
-  
+  struct tm date;
+  date.tm_year = 95;
+  date.tm_mon = 1;
+  date.tm_mday = 12;
+
+  //On créer un cours
+  //Cours *c = enseignant->proposerCours("CPOA", "Conception", date, date, date, 200);
+  //std::cout << c << "\n";
+
+
+
+
   return 0;
 }

@@ -1,27 +1,56 @@
 #ifndef ETUDIANT
 #define ETUDIANT
 
+/**
+ * \file
+ * \brief
+ * \version
+ * \date
+ *
+ *
+ */
+
 #include "Utilisateur.hpp"
 #include <string>
 #include <ostream>
 #include <iostream>
 
-
+/*! \class
+ * \brief
+ *
+ *
+ */
 class Etudiant : public Utilisateur {
 
-  //Variable propre a l'étudiant (numero etudiant)
-  std::string numIne;
+  std::string numIne; /*!< Variable propre a l'étudiant (numero etudiant) */
 
 public:
 
-  //Le constructeur de la classe étudiant génére un numIne
+  /*!
+   * \brief Constructeur
+   *
+   * Constructeur de la classe
+   *
+   * \param n
+   * \param p
+   * \param d
+   */
   Etudiant(std::string n, std::string p, struct tm d)
   :Utilisateur(n,p,d)
   {
     numIne = "" + n.substr(0,5) + p.substr(0,3)+"3u";
   }
 
-  //Affiche le nom et prenom de l'étudiant en console
+  /*!
+   * \brief Destructeur
+   *
+   *
+   */
+   ~Etudiant();
+
+  /*!
+   * \brief Affiche des informations sur l'objet
+   */
   void print(){
         std::cout << "Etudiant " <<  nom << " " << prenom <<'\n';
   }
