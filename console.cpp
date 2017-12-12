@@ -51,7 +51,8 @@ int main(int argc, char *argv[]){
   //On créer un cours
   Enseignant* ens = static_cast<Enseignant*>(enseignant);
   Cours *c = ens->proposerCours("CPOA", "Conception", date, date, date, 200);
-  std::cout << *c << "\n";
+  c->print();
+  std::cout << ens << std::endl;
 
 
 

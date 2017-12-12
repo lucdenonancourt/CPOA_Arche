@@ -43,9 +43,6 @@ class Cours {
   Enseignant* enseignant;
 
 
-  friend std::ostream& operator<<(std::ostream&, const Cours&);
-
-
 public:
 
   /*!
@@ -78,10 +75,13 @@ public:
    */
    ~Cours();
 
-};
+   /*!
+    * \brief Affiche des informations sur le cours
+    */
+   void print(){
+         std::cout << "Cours " <<  id_cours << " " << descr << " " << enseignant <<'\n';
+   }
 
-std::ostream& operator<<(std::ostream &strm, const Cours &c) {
-  return strm << "Cours(" << c.id_cours << ")";
-}
+};
 
 #endif
