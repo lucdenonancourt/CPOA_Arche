@@ -2,10 +2,10 @@
 #define COURS
 
 /**
- * \file
- * \brief
- * \version
- * \date
+ * \file Cours.hpp
+ * \brief Classe cours
+ * \version 1d
+ * \date 10 décembre 2017
  *
  *
  */
@@ -13,9 +13,11 @@
 #include <string>
 #include <ostream>
 
-/*! \class
- * \brief
+/*! \class Cours
+ * \brief Classe cours
  *
+ * Permet de creer un cours en attente de validation, et par la suite de l'ajouter
+ * a l'application
  *
  */
 class Cours {
@@ -48,11 +50,14 @@ public:
   /*!
    * \brief Constructeur
    *
-   * Constructeur de la classe
+   * Constructeur de la classe COurs
    *
-   * \param n
-   * \param p
-   * \param d
+   * \param nomCours Nom du cours proposé
+   * \param description Description du Cours
+   * \param dateD date de début du Cours
+   * \param dateF date de fin du cours
+   * \param dateFinInsc Date de fin d'inscriptions
+   * \param capa Capacité d'étudiant maximal du cours
    */
   Cours(std::string nomCours, std::string description, struct tm dateD, struct tm dateF, struct tm dateFinInsc, int capa)  {
     id_cours = nomCours;
@@ -68,7 +73,7 @@ public:
   /*!
    * \brief Destructeur
    *
-   *
+   * Détruit le cours
    */
    ~Cours();
 

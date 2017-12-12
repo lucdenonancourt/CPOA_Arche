@@ -16,10 +16,10 @@
 #include <iostream>
 
 
-/*! \class
- * \brief
+/*! \class Administateur
+ * \brief Classe concrete Administateur
  *
- *
+ * Permet d'instancier un utilisateur Administateur avec un numAdmin spécifique
  */
 class Administrateur : public Utilisateur {
 
@@ -28,13 +28,12 @@ class Administrateur : public Utilisateur {
 public:
 
   /*!
-   * \brief
+   * \brief Constructeur de la classe Administateur
    *
-   * Constructeur de la classe
    *
-   * \param n
-   * \param p
-   * \param d
+   * \param n Nom de l'Administateur
+   * \param p Prénom de l'administrateur
+   * \param d Date de naissance de l'administrateur
    */
   Administrateur(std::string n, std::string p, struct tm d)
   :Utilisateur(n,p,d)
@@ -45,12 +44,12 @@ public:
   /*!
    * \brief Destructeur
    *
-   *
+   * Destructeur de l'administrateur (appelè avant celui d'Utilisateur)
    */
    ~Administrateur();
 
   /*!
-   * \brief Affiche des informations sur l'objet
+   * \brief Affiche des informations sur l'Administrateur
    */
   void print(){
         std::cout << "Administrateur " <<  nom << " " << prenom <<'\n';

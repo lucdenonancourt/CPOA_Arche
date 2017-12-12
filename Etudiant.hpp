@@ -2,10 +2,10 @@
 #define ETUDIANT
 
 /**
- * \file
- * \brief
- * \version
- * \date
+ * \file Etudiant.hpp
+ * \brief Classe Etudiant
+ * \version 1d
+ * \date 10 décembre 2017
  *
  *
  */
@@ -15,10 +15,10 @@
 #include <ostream>
 #include <iostream>
 
-/*! \class
- * \brief
+/*! \class Etudiant
+ * \brief Classe Etudiant
  *
- *
+ *  Permet d'instancier un étudiant avec un numIne spécifique
  */
 class Etudiant : public Utilisateur {
 
@@ -29,11 +29,11 @@ public:
   /*!
    * \brief Constructeur
    *
-   * Constructeur de la classe
+   * Constructeur de la classe Etudiant
    *
-   * \param n
-   * \param p
-   * \param d
+   * \param n Nom de l'étudiant
+   * \param p Prénom de l'étudiant
+   * \param d Date de naissance de l'étudiant
    */
   Etudiant(std::string n, std::string p, struct tm d)
   :Utilisateur(n,p,d)
@@ -44,12 +44,12 @@ public:
   /*!
    * \brief Destructeur
    *
-   *
+   * Détruit un étudiant (appelé avant le déstructeur d'utilisateur)
    */
    ~Etudiant();
 
   /*!
-   * \brief Affiche des informations sur l'objet
+   * \brief Affiche des informations sur l'Etudiant
    */
   void print(){
         std::cout << "Etudiant " <<  nom << " " << prenom <<'\n';

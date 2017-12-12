@@ -2,10 +2,10 @@
 #define UTILISATEUR
 
 /**
- * \file
- * \brief
- * \version
- * \date
+ * \file Utilisateur.hpp
+ * \brief Classe abstraite utilisateur
+ * \version 1d
+ * \date 10 décembre 2017
  *
  *
  */
@@ -14,10 +14,10 @@
 #include <string>
 #include <iostream>
 
-/*! \class
- * \brief
+/*! \class Utilisateur
+ * \brief Classe utilisateur
  *
- *
+ *  Cette classe permet de creer un utilisateur (nom/prenom/date naissance)
  */
 class Utilisateur {
 
@@ -30,11 +30,11 @@ protected:
   /*!
    * \brief Constructeur
    *
-   * Constructeur de la classe
+   * Constructeur de la classe Utilisateur
    *
-   * \param n
-   * \param p
-   * \param d
+   * \param n Nom de l'utilisateur
+   * \param p Prénom de l'utilisateur
+   * \param d Date de naissance de l'utilisateur
    */
   Utilisateur(std::string n, std::string p, struct tm d){
     nom = n;
@@ -45,8 +45,11 @@ protected:
 public:
   /*!
    * \brief Destructeur
+   *
+   * Detruit un utilisateur (appelé apres le destructeur de la sous classe)
    */
   ~Utilisateur() {}
+
   /*!
    * \brief Affiche des informations sur l'objet
    */
