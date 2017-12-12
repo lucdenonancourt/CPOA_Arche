@@ -1,0 +1,116 @@
+\hypertarget{classEnseignant}{\section{Enseignant Class Reference}
+\label{classEnseignant}\index{Enseignant@{Enseignant}}
+}
+
+
+Classe enseignant.  
+
+
+
+
+{\ttfamily \#include $<$Enseignant.\-hpp$>$}
+
+Inheritance diagram for Enseignant\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEnseignant}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEnseignant_a349f455fe0fbf43a884e2f8a21f057d7}{Enseignant} (std\-::string n, std\-::string pre, struct tm date\-N)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{classEnseignant_a9317ba87e8b7e32fa5e48bdbff1c9cce}{$\sim$\-Enseignant} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\hyperlink{classCours}{Cours} $\ast$ \hyperlink{classEnseignant_a5c39655711ebda90f8568be84fe64872}{proposer\-Cours} (std\-::string nom\-Cours, std\-::string description, struct tm date\-Debut, struct tm date\-Fin, struct tm date\-Fin\-Insc, int nb\-P\-Laces)
+\begin{DoxyCompactList}\small\item\em Permet a l'enseignant de creer un cours. \end{DoxyCompactList}\item 
+\hypertarget{classEnseignant_af86bb8ab32afabe18507ce5788370c3d}{void \hyperlink{classEnseignant_af86bb8ab32afabe18507ce5788370c3d}{print} ()}\label{classEnseignant_af86bb8ab32afabe18507ce5788370c3d}
+
+\begin{DoxyCompactList}\small\item\em Affiche des informations sur l'\hyperlink{classEnseignant}{Enseignant}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Classe enseignant. 
+
+Permet d'instancier un enseignant avec un num\-Ens spécifique 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classEnseignant_a349f455fe0fbf43a884e2f8a21f057d7}{\index{Enseignant@{Enseignant}!Enseignant@{Enseignant}}
+\index{Enseignant@{Enseignant}!Enseignant@{Enseignant}}
+\subsubsection[{Enseignant}]{\setlength{\rightskip}{0pt plus 5cm}Enseignant\-::\-Enseignant (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{n, }
+\item[{std\-::string}]{pre, }
+\item[{struct tm}]{date\-N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classEnseignant_a349f455fe0fbf43a884e2f8a21f057d7}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{classEnseignant}{Enseignant}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & nom de l'enseignant \\
+\hline
+{\em p} & prenom de l'enseignant \\
+\hline
+{\em d} & date de naissance de l'enseignant \\
+\hline
+\end{DoxyParams}
+\hypertarget{classEnseignant_a9317ba87e8b7e32fa5e48bdbff1c9cce}{\index{Enseignant@{Enseignant}!$\sim$\-Enseignant@{$\sim$\-Enseignant}}
+\index{$\sim$\-Enseignant@{$\sim$\-Enseignant}!Enseignant@{Enseignant}}
+\subsubsection[{$\sim$\-Enseignant}]{\setlength{\rightskip}{0pt plus 5cm}Enseignant\-::$\sim$\-Enseignant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classEnseignant_a9317ba87e8b7e32fa5e48bdbff1c9cce}
+
+
+Destructeur. 
+
+Detruit un enseignant (appelè avant le déstructeur utilisateur) 
+
+\subsection{Member Function Documentation}
+\hypertarget{classEnseignant_a5c39655711ebda90f8568be84fe64872}{\index{Enseignant@{Enseignant}!proposer\-Cours@{proposer\-Cours}}
+\index{proposer\-Cours@{proposer\-Cours}!Enseignant@{Enseignant}}
+\subsubsection[{proposer\-Cours}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cours}$\ast$ Enseignant\-::proposer\-Cours (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{nom\-Cours, }
+\item[{std\-::string}]{description, }
+\item[{struct tm}]{date\-Debut, }
+\item[{struct tm}]{date\-Fin, }
+\item[{struct tm}]{date\-Fin\-Insc, }
+\item[{int}]{nb\-P\-Laces}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classEnseignant_a5c39655711ebda90f8568be84fe64872}
+
+
+Permet a l'enseignant de creer un cours. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\-Cours} & Nom du cours proposé \\
+\hline
+{\em description} & Description du \hyperlink{classCours}{Cours} \\
+\hline
+{\em date\-D} & date de début du \hyperlink{classCours}{Cours} \\
+\hline
+{\em date\-F} & date de fin du cours \\
+\hline
+{\em date\-Fin\-Insc} & Date de fin d'inscriptions \\
+\hline
+{\em capa} & Capacité d'étudiant maximal du cours\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointeur vers le cours créé 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Enseignant_8hpp}{Enseignant.\-hpp}\end{DoxyCompactItemize}

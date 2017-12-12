@@ -84,31 +84,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="classCours-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Cours Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe cours.  
+ <a href="classCours.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Cours_8hpp_source.html">Cours.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac4afd7bd8ad1d81d92da9ae0944d0ea0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCours.html#ac4afd7bd8ad1d81d92da9ae0944d0ea0">Cours</a> (std::string nomCours, std::string description, struct tm dateD, struct tm dateF, struct tm dateFinInsc, int capa)</td></tr>
-<tr class="memdesc:ac4afd7bd8ad1d81d92da9ae0944d0ea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#ac4afd7bd8ad1d81d92da9ae0944d0ea0">More...</a><br/></td></tr>
-<tr class="separator:ac4afd7bd8ad1d81d92da9ae0944d0ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a598a1fa3dfe1a337fb07731a51d7da16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a598a1fa3dfe1a337fb07731a51d7da16"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCours.html#a598a1fa3dfe1a337fb07731a51d7da16">~Cours</a> ()</td></tr>
-<tr class="memdesc:a598a1fa3dfe1a337fb07731a51d7da16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br/></td></tr>
+<tr class="memitem:a54d01f69f01be5224bd4a76dd90dedd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCours.html#a54d01f69f01be5224bd4a76dd90dedd9">Cours</a> (std::string nomCours, std::string description, struct tm dateD, struct tm dateF, struct tm dateFinInsc, int capa, <a class="el" href="classEnseignant.html">Enseignant</a> *ens)</td></tr>
+<tr class="memdesc:a54d01f69f01be5224bd4a76dd90dedd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a54d01f69f01be5224bd4a76dd90dedd9">More...</a><br/></td></tr>
+<tr class="separator:a54d01f69f01be5224bd4a76dd90dedd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a598a1fa3dfe1a337fb07731a51d7da16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCours.html#a598a1fa3dfe1a337fb07731a51d7da16">~Cours</a> ()</td></tr>
+<tr class="memdesc:a598a1fa3dfe1a337fb07731a51d7da16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="#a598a1fa3dfe1a337fb07731a51d7da16">More...</a><br/></td></tr>
 <tr class="separator:a598a1fa3dfe1a337fb07731a51d7da16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a4651d55510a1512c2612846e83a286d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4651d55510a1512c2612846e83a286d1"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;, const <a class="el" href="classCours.html">Cours</a> &amp;)</td></tr>
-<tr class="separator:a4651d55510a1512c2612846e83a286d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f58aede568d4a8f47f9c4a702fa297"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0f58aede568d4a8f47f9c4a702fa297"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCours.html#ac0f58aede568d4a8f47f9c4a702fa297">print</a> ()</td></tr>
+<tr class="memdesc:ac0f58aede568d4a8f47f9c4a702fa297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche des informations sur le cours. <br/></td></tr>
+<tr class="separator:ac0f58aede568d4a8f47f9c4a702fa297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac4afd7bd8ad1d81d92da9ae0944d0ea0"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe cours. </p>
+<p>Permet de creer un cours en attente de validation, et par la suite de l'ajouter a l'application </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a54d01f69f01be5224bd4a76dd90dedd9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -149,7 +153,13 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>capa</em>&#160;</td>
+          <td class="paramname"><em>capa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classEnseignant.html">Enseignant</a> *&#160;</td>
+          <td class="paramname"><em>ens</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -165,15 +175,36 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </div><div class="memdoc">
 
 <p>Constructeur. </p>
-<p>Constructeur de la classe</p>
+<p>Constructeur de la classe COurs</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td></td></tr>
-    <tr><td class="paramname">p</td><td></td></tr>
-    <tr><td class="paramname">d</td><td></td></tr>
+    <tr><td class="paramname">nomCours</td><td>Nom du cours proposé </td></tr>
+    <tr><td class="paramname">description</td><td>Description du <a class="el" href="classCours.html" title="Classe cours. ">Cours</a> </td></tr>
+    <tr><td class="paramname">dateD</td><td>date de début du <a class="el" href="classCours.html" title="Classe cours. ">Cours</a> </td></tr>
+    <tr><td class="paramname">dateF</td><td>date de fin du cours </td></tr>
+    <tr><td class="paramname">dateFinInsc</td><td>Date de fin d'inscriptions </td></tr>
+    <tr><td class="paramname">capa</td><td>Capacité d'étudiant maximal du cours </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a598a1fa3dfe1a337fb07731a51d7da16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cours::~Cours </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructeur. </p>
+<p>Détruit le cours </p>
 
 </div>
 </div>
@@ -183,7 +214,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 12 2017 11:36:08 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 13:59:59 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
