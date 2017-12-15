@@ -1,0 +1,33 @@
+Projet ARCHE CPOA 2017-2018
+
+Hugo BRECOURT
+Marvin FORNITO
+Luc de NONANCOURT
+
+***********
+
+Liste des itérations et fonctionnalités :
+
+1a - Instanciation des classes utilisateurs (enseignant/etudiant/administrateur).
+
+1b - Ajout de la frabrique d'utilisateurs V.1.
+
+1c - Ajout de la classe cours.
+
+1d - Lien entre un cours et un enseignant, ajout de balise Doxygen.
+
+1e - CORRECTIF apporté aprés le rendez vous:
+	-Utilisation des destructeurs (test valgrind)
+	-Modification du pattern design factory (une classe et trois méthodes).
+
+1f - Ajout de l'interface QTCreator, écriture en fichier des utilisateurs et cours créé.
+
+
+*************
+
+Pour compiler / executer
+
+make -f text.make 
+./verif
+
+*************
